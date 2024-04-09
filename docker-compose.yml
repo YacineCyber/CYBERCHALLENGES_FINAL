@@ -6,7 +6,7 @@ services:
     user: root
     restart: always
     ports:
-      - "8080:8000"
+      - "8000:8000"
     environment:
       - UPLOAD_FOLDER=/var/uploads
       - DATABASE_URL=mysql+pymysql://ctfd:ctfd@db/ctfd
@@ -40,10 +40,10 @@ services:
     image: mariadb:10.4.12
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=gL7,a.5laYg<xH
-      - MYSQL_USER=gL7,a.5laYg<xH
-      - MYSQL_PASSWORD=gL7,a.5laYg<xH
-      - MYSQL_DATABASE=gL7,a.5laYg<xH
+      - MYSQL_ROOT_PASSWORD=ctfd
+      - MYSQL_USER=ctfd
+      - MYSQL_PASSWORD=ctfd
+      - MYSQL_DATABASE=ctfd
     volumes:
       - .data/mysql:/var/lib/mysql
     networks:
